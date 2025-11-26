@@ -1,0 +1,19 @@
+services:
+  video-avatar:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: video-avatar-front
+    image: video-avatar-front
+    ports:
+      - '127.0.0.1:3034:3000'
+    env_file:
+      - .env.production
+    networks:
+      - video-avatar-network
+    restart: unless-stopped
+
+networks:
+  video-avatar-network:
+    name: video-avatar-network
+    driver: bridge
