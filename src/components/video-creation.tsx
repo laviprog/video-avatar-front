@@ -221,9 +221,9 @@ export default function VideoCreation({ onVideoCreated }: VideoCreationProps) {
                 disabled={isLoading}
                 required
                 rows={6}
-                maxLength={1000}
+                maxLength={10000}
               />
-              <p className="text-sm text-gray-500">Количество символов: {text.length} / 1000</p>
+              <p className="text-sm text-gray-500">Количество символов: {text.length} / 10000</p>
             </div>
 
             <Button type="submit" className="w-full" disabled={isLoading || avatars.length === 0}>
